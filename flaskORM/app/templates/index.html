@@ -1,0 +1,85 @@
+{% extends 'base.html'%}
+{% block title%}
+    首页
+{% endblock %}
+{% block label %}
+    首页
+{% endblock %}
+
+{% block content %}
+<!--    {% for i in curr_list%}-->
+<!--        <p>{{i.c_name}}</p>-->
+<!--    {% endfor %}-->
+    <section class="brandSelector">
+    <ul class="brandSelectorTabs" ng-init="selectedTab = '0'">
+        <!-- ngRepeat: campaign in campaigns --><li ng-repeat="campaign in campaigns" ng-click="selectCampaign(campaign)" class="brandSelectorTab ng-binding ng-scope active" ng-class="{ active: campaign === selectedCampaign }">
+            <!-- ngIf: campaign.Campaign.Url -->
+            主场球衣
+        </li><!-- end ngRepeat: campaign in campaigns --><li ng-repeat="campaign in campaigns" ng-click="selectCampaign(campaign)" class="brandSelectorTab ng-binding ng-scope" ng-class="{ active: campaign === selectedCampaign }">
+            <!-- ngIf: campaign.Campaign.Url -->
+            按品牌商店
+        </li><!-- end ngRepeat: campaign in campaigns -->
+    </ul>
+    <div class="brandSelectorContent">
+        <a ng-click="previous()" class="navigator navigatorLeft" ng-show="!itemsFitWithoutScrolling" style="width: 37.5px;">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <div class="brandSelectorBrandsContainer">
+            <ul class="brandSelectorBrands" style="height: 185px;">
+                <!-- ngRepeat: brand in selectedCampaign.Brands track by $index --><li class="brandSelectorBrandItem ng-scope" ng-repeat="brand in selectedCampaign.Brands track by $index" style="left: -147.5px;">
+                    <a ng-href="/stores/manutd/zh/c/football-kits/shop-by-player/wan-bissaka-29" href="/stores/manutd/zh/c/football-kits/shop-by-player/wan-bissaka-29">
+                        <img ng-src="//static2.fanobject.com/stores/manutd/artwork/english/banners/WAN_BISSAKA_29_THIRD.jpg" alt="主场球衣" src="//static2.fanobject.com/stores/manutd/artwork/english/banners/WAN_BISSAKA_29_THIRD.jpg">
+                    </a>
+                </li><!-- end ngRepeat: brand in selectedCampaign.Brands track by $index --><li class="brandSelectorBrandItem ng-scope" ng-repeat="brand in selectedCampaign.Brands track by $index" style="left: 37.5px;">
+                    <a ng-href="/stores/manutd/zh/c/football-kits/shop-by-player/maguire-5" href="/stores/manutd/zh/c/football-kits/shop-by-player/maguire-5">
+                        <img ng-src="//static2.fanobject.com/stores/manutd/artwork/english/banners/MAGUIRE_5_THIRD.jpg" alt="主场球衣" src="//static2.fanobject.com/stores/manutd/artwork/english/banners/MAGUIRE_5_THIRD.jpg">
+                    </a>
+                </li><!-- end ngRepeat: brand in selectedCampaign.Brands track by $index --><li class="brandSelectorBrandItem ng-scope" ng-repeat="brand in selectedCampaign.Brands track by $index" style="left: 222.5px;">
+                    <a ng-href="/stores/manutd/zh/c/football-kits/shop-by-player/rashford-10" href="/stores/manutd/zh/c/football-kits/shop-by-player/rashford-10">
+                        <img ng-src="//static2.fanobject.com/stores/manutd/artwork/english/banners/RASHFORD_10_THIRD.jpg" alt="主场球衣" src="//static2.fanobject.com/stores/manutd/artwork/english/banners/RASHFORD_10_THIRD.jpg">
+                    </a>
+                </li><!-- end ngRepeat: brand in selectedCampaign.Brands track by $index --><li class="brandSelectorBrandItem ng-scope" ng-repeat="brand in selectedCampaign.Brands track by $index" style="left: 407.5px;">
+                    <a ng-href="/stores/manutd/zh/c/football-kits/shop-by-player/james-21" href="/stores/manutd/zh/c/football-kits/shop-by-player/james-21">
+                        <img ng-src="//static2.fanobject.com/stores/manutd/artwork/english/banners/JAMES_21_THIRD.jpg" alt="主场球衣" src="//static2.fanobject.com/stores/manutd/artwork/english/banners/JAMES_21_THIRD.jpg">
+                    </a>
+                </li><!-- end ngRepeat: brand in selectedCampaign.Brands track by $index --><li class="brandSelectorBrandItem ng-scope" ng-repeat="brand in selectedCampaign.Brands track by $index" style="left: 592.5px;">
+                    <a ng-href="/stores/manutd/zh/c/football-kits/shop-by-player/martial-9" href="/stores/manutd/zh/c/football-kits/shop-by-player/martial-9">
+                        <img ng-src="//static2.fanobject.com/stores/manutd/artwork/english/banners/MARTIAL_9_THIRD.jpg" alt="主场球衣" src="//static2.fanobject.com/stores/manutd/artwork/english/banners/MARTIAL_9_THIRD.jpg">
+                    </a>
+                </li><!-- end ngRepeat: brand in selectedCampaign.Brands track by $index --><li class="brandSelectorBrandItem ng-scope" ng-repeat="brand in selectedCampaign.Brands track by $index" style="left: 777.5px;">
+                    <a ng-href="/stores/manutd/zh/c/football-kits/shop-by-player/pogba-6" href="/stores/manutd/zh/c/football-kits/shop-by-player/pogba-6">
+                        <img ng-src="//static2.fanobject.com/stores/manutd/artwork/english/banners/POGBA_6_THIRD.jpg" alt="主场球衣" src="//static2.fanobject.com/stores/manutd/artwork/english/banners/POGBA_6_THIRD.jpg">
+                    </a>
+                </li><!-- end ngRepeat: brand in selectedCampaign.Brands track by $index --><li class="brandSelectorBrandItem ng-scope" ng-repeat="brand in selectedCampaign.Brands track by $index">
+                    <a ng-href="/stores/manutd/zh/c/football-kits/shop-by-player/wan-bissaka-29" href="/stores/manutd/zh/c/football-kits/shop-by-player/wan-bissaka-29">
+                        <img ng-src="//static2.fanobject.com/stores/manutd/artwork/english/banners/WAN_BISSAKA_29_THIRD.jpg" alt="主场球衣" src="//static2.fanobject.com/stores/manutd/artwork/english/banners/WAN_BISSAKA_29_THIRD.jpg">
+                    </a>
+                </li><!-- end ngRepeat: brand in selectedCampaign.Brands track by $index --><li class="brandSelectorBrandItem ng-scope" ng-repeat="brand in selectedCampaign.Brands track by $index">
+                    <a ng-href="/stores/manutd/zh/c/football-kits/shop-by-player/maguire-5" href="/stores/manutd/zh/c/football-kits/shop-by-player/maguire-5">
+                        <img ng-src="//static2.fanobject.com/stores/manutd/artwork/english/banners/MAGUIRE_5_THIRD.jpg" alt="主场球衣" src="//static2.fanobject.com/stores/manutd/artwork/english/banners/MAGUIRE_5_THIRD.jpg">
+                    </a>
+                </li><!-- end ngRepeat: brand in selectedCampaign.Brands track by $index --><li class="brandSelectorBrandItem ng-scope" ng-repeat="brand in selectedCampaign.Brands track by $index">
+                    <a ng-href="/stores/manutd/zh/c/football-kits/shop-by-player/rashford-10" href="/stores/manutd/zh/c/football-kits/shop-by-player/rashford-10">
+                        <img ng-src="//static2.fanobject.com/stores/manutd/artwork/english/banners/RASHFORD_10_THIRD.jpg" alt="主场球衣" src="//static2.fanobject.com/stores/manutd/artwork/english/banners/RASHFORD_10_THIRD.jpg">
+                    </a>
+                </li><!-- end ngRepeat: brand in selectedCampaign.Brands track by $index --><li class="brandSelectorBrandItem ng-scope" ng-repeat="brand in selectedCampaign.Brands track by $index">
+                    <a ng-href="/stores/manutd/zh/c/football-kits/shop-by-player/james-21" href="/stores/manutd/zh/c/football-kits/shop-by-player/james-21">
+                        <img ng-src="//static2.fanobject.com/stores/manutd/artwork/english/banners/JAMES_21_THIRD.jpg" alt="主场球衣" src="//static2.fanobject.com/stores/manutd/artwork/english/banners/JAMES_21_THIRD.jpg">
+                    </a>
+                </li><!-- end ngRepeat: brand in selectedCampaign.Brands track by $index --><li class="brandSelectorBrandItem ng-scope" ng-repeat="brand in selectedCampaign.Brands track by $index">
+                    <a ng-href="/stores/manutd/zh/c/football-kits/shop-by-player/martial-9" href="/stores/manutd/zh/c/football-kits/shop-by-player/martial-9">
+                        <img ng-src="//static2.fanobject.com/stores/manutd/artwork/english/banners/MARTIAL_9_THIRD.jpg" alt="主场球衣" src="//static2.fanobject.com/stores/manutd/artwork/english/banners/MARTIAL_9_THIRD.jpg">
+                    </a>
+                </li><!-- end ngRepeat: brand in selectedCampaign.Brands track by $index --><li class="brandSelectorBrandItem ng-scope" ng-repeat="brand in selectedCampaign.Brands track by $index">
+                    <a ng-href="/stores/manutd/zh/c/football-kits/shop-by-player/pogba-6" href="/stores/manutd/zh/c/football-kits/shop-by-player/pogba-6">
+                        <img ng-src="//static2.fanobject.com/stores/manutd/artwork/english/banners/POGBA_6_THIRD.jpg" alt="主场球衣" src="//static2.fanobject.com/stores/manutd/artwork/english/banners/POGBA_6_THIRD.jpg">
+                    </a>
+                </li><!-- end ngRepeat: brand in selectedCampaign.Brands track by $index -->
+            </ul>
+        </div>
+        <a ng-click="next()" class="navigator navigatorRight" ng-show="!itemsFitWithoutScrolling" style="width: 37.5px;">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</section>
+{% endblock %}

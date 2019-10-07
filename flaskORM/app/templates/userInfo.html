@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    个人中心
+{% endblock %}
+
+{% block label %}
+
+{% endblock %}
+
+{% block content %}
+    <!-- 个人详情 -->
+    <div class="row">
+
+            <div class="col-lg-12">
+
+              <!-- Circle Buttons -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Circle Buttons</h6>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <tr>
+                            <td rowspan="3">
+                                <img style="width: 50%;height: 50%;" src="/static/img/1.jpg">
+                            </td>
+                            <th>姓名</th>
+                            <td>索尔斯克亚</td>
+                            <th>性别</th>
+                            <td>男</td>
+                        </tr>
+                        <tr>
+                            <th>年龄</th>
+                            <td>46</td>
+                            <th>身份</th>
+                            <td>教练</td>
+                        </tr>
+                        <tr>
+                            <th>俱乐部</th>
+                            <td>曼联</td>
+                            <th>阶段</th>
+                            <td>接近下课</td>
+                        </tr>
+                        <tr>
+                            <th>联系方式</th>
+                            <th>133××××××××</th>
+                            <th>家庭住址</th>
+                            <td colspan="2">英国曼彻斯特×××××××</td>
+                        </tr>
+                    </table>
+                  </div>
+              </div>
+
+
+            </div>
+
+          </div>
+        <div class="row">
+            <div class="col-lg-12">
+              <!-- Circle Buttons -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">课程表</h6>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>周一</th>
+                            <th>周二</th>
+                            <th>周三</th>
+                            <th>周四</th>
+                            <th>周五</th>
+                            <th>周六</th>
+                            <th>周日</th>
+                        </tr>
+                        {% for w in calendar%}
+                            <tr>
+                                {% for d in w %}
+                                    <td>{{d}}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+              </div>
+            </div>
+        </div>
+{% endblock %}
+

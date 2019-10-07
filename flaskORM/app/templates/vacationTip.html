@@ -1,0 +1,63 @@
+{% extends 'base.html'%}
+{% block title%}
+    请假
+{% endblock %}
+{% block label %}
+
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        <input type="hidden" name="csrf_token" id="csrf_token" value="{{ csrf_token() }}">
+        <table class="table table-bordered">
+            <tr>
+                <th>姓名</th>
+                <td><input type="text" name="vacation_name" class="form-control form-control-user" placeholder="姓名"></td>
+                <th>假期类型</th>
+                <td><select name="vacation_type" class="form-control form-control-user">
+                    <option value="">事假</option>
+                    <option value="">病假</option>
+                    <option value="">产假</option>
+                    <option value="">婚假</option>
+                    <option value="">年假</option>
+                    <option value="">缺勤</option>
+                    <option value="">加班</option>
+                    <option value="">调休</option>
+                    <option value="">出差</option>
+                </select></td>
+            </tr>
+            <tr>
+                <th>开始时间</th>
+                <td><input type="date" class="form-control form-control-user" placeholder="开始时间" name="vacation_start"></td>
+                <th>结束时间</th>
+                <td><input type="date"class="form-control form-control-user" placeholder="结束时间" name="vacation_deadline"></td>
+                <th>请假天数</th>
+                <td><input type="text" name="vacation_day" class="form-control form-control-user" ></td>
+            </tr>
+            <tr>
+                <th>联系方式</th>
+                <td><input type="text" class="form-control form-control-user" placeholder="联系方式" name="vacation_phone"></td>
+                <th>假条状态</th>
+                <td><select name="vacation_status" class="form-control form-control-user">
+                    <option value="">请假</option>
+                    <option value="">批准</option>
+                    <option value="">驳回</option>
+                    <option value="">销假</option>
+                </select></td>
+            </tr>
+            <tr>
+                <th>描述</th>
+                <td colspan="3">
+                    <textarea  type="text" class="form-control form-control-user" name="vacation_description">
+
+                </textarea>
+                </td>
+                <td>
+                    <input type="submit" class="btn btn-user btn-primary" value="提交">
+                </td>
+
+            </tr>
+
+        </table>
+    </form>
+{% endblock %}
